@@ -19,4 +19,4 @@ stages:
             git fetch repoGithub main
             git reset --hard repoGithub/main
             git pull --rebase repoGithub main
-            git push --force origin
+            git push --force origin main
