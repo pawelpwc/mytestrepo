@@ -15,17 +15,8 @@ stages:
           displayName: run_commands
         - task: mirror-git-repository-vsts-task@1
           inputs:
-            sourceGitRepositoryUri: 'https://dev.azure.com/koprowskipawel/_git/GithHubSyncRepo'
-            sourceGitRepositoryPersonalAccessToken: '5kvrypj73x74qvnqcqigg4mwekfmv4bgh3eikt7vwnxlyyddxnmq'
+            sourceGitRepositoryUri: '$(sourceGitRepositoryUri)'
+            sourceGitRepositoryPersonalAccessToken: '$(sourceGitRepositoryPersonalAccessToken)'
             # sourceVerifySSLCertificate: false
-            destinationGitRepositoryUri: 'https://github.com/pawelpwc/mytestrepo.git'
-            destinationGitRepositoryPersonalAccessToken: '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'
-    # sourceGitRepositoryUri: 'https://github.com/swellaby/vsts-mirror-git-repository.git'
-    # sourceVerifySSLCertificate: false
-    # destinationGitRepositoryUri: 'https://dev.azure.com/swellaby/OpenSource/_git/mirror2'
-    # destinationGitRepositoryPersonalAccessToken: '$(destVar)'
-        # - bash: | 
-        #     # git clone --mirror "https://koprowskipawel@dev.azure.com/koprowskipawel/GithHubSyncRepo/_git/GithHubSyncRepo"
-        #     git remote add --mirror=fetch secondary "https://github.com/pawelpwc/mytestrepo.git"
-        #     # git fetch "https://koprowskipawel@dev.azure.com/koprowskipawel/GithHubSyncRepo/_git/GithHubSyncRepo"
-        #     git push secondary  --all -f
+            destinationGitRepositoryUri: '$(destinationGitRepositoryUri)'
+            destinationGitRepositoryPersonalAccessToken: '$(destinationGitRepositoryPersonalAccessToken)'
