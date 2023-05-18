@@ -16,7 +16,7 @@ stages:
         - task: mirror-git-repository-vsts-task@1
           inputs:
             sourceGitRepositoryUri: 'https://dev.azure.com/koprowskipawel/_git/GithHubSyncRepo'
-            sourceGitRepositoryPersonalAccessToken: 'wjmejd2ekeedc7y6egk6ma6nsjg3velgjkstny63linvdw2za2ea'
+            sourceGitRepositoryPersonalAccessToken: 'gaemwm5shwowtcdhln52bqp2swfwzw7vlwmfzbh4d3za67kkufrq'
             sourceVerifySSLCertificate: false
             sourceGitRepositoryCloneDirectoryName: 'aa'
             destinationGitRepositoryUri: 'https://github.com/pawelpwc/mytestrepo.git'
