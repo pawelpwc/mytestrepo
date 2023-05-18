@@ -14,9 +14,8 @@ stages:
           persistCredentials: true
           displayName: run_commands
         - bash: | 
-            git checkout main
-            git remote add repoGithub $(REMOTE_ADDR)
-            git fetch repoGithub main
-            git reset --hard repoGithub/main
-            git pull --rebase repoGithub main
-            git push repoGithub --force main
+            git clone --mirror "https://koprowskipawel@dev.azure.com/koprowskipawel/GithHubSyncRepo/_git/GithHubSyncRepo"
+            cd GithHubSyncRepo.git
+            git remote add --mirror=fetch secondary "https://github.com/pawelpwc/mytestrepo.git"
+            git fetch "https://koprowskipawel@dev.azure.com/koprowskipawel/GithHubSyncRepo/_git/GithHubSyncRepo"
+            git push secondary  --all -f
