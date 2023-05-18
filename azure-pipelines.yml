@@ -13,15 +13,15 @@ stages:
           clean: true
           persistCredentials: true
           displayName: run_commands
-        - task: mirror-git-repository-vsts-task@1
-          inputs:
-            sourceGitRepositoryUri: '$(Build.Repository.Uri)'
-            sourceGitRepositoryPersonalAccessToken: ''
-            sourceGitRepositoryCloneDirectoryName: 'bb'
-            destinationGitRepositoryUri: 'https://github.com/pawelpwc/mytestrepo.git'
-            destinationGitRepositoryPersonalAccessToken: ''
-        # - bash: | 
-        #     git clone --mirror "https://koprowskipawel@dev.azure.com/koprowskipawel/GithHubSyncRepo/_git/GithHubSyncRepo"
-            # git remote add --mirror=fetch secondary "https://github.com/pawelpwc/mytestrepo.git"
+        # - task: mirror-git-repository-vsts-task@1
+        #   inputs:
+        #     sourceGitRepositoryUri: '$(Build.Repository.Uri)'
+        #     sourceGitRepositoryPersonalAccessToken: ''
+        #     sourceGitRepositoryCloneDirectoryName: 'bb'
+        #     destinationGitRepositoryUri: 'https://github.com/pawelpwc/mytestrepo.git'
+        #     destinationGitRepositoryPersonalAccessToken: ''
+        - bash: | 
+            # git clone --mirror "https://koprowskipawel@dev.azure.com/koprowskipawel/GithHubSyncRepo/_git/GithHubSyncRepo"
+            git remote add --mirror=fetch secondary "https://github.com/pawelpwc/mytestrepo.git"
             # git fetch "https://koprowskipawel@dev.azure.com/koprowskipawel/GithHubSyncRepo/_git/GithHubSyncRepo"
-            # git push secondary  --all -f
+            git push secondary  --all -f
