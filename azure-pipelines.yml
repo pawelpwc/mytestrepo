@@ -16,11 +16,10 @@ stages:
         - task: mirror-git-repository-vsts-task@1
           inputs:
             sourceGitRepositoryUri: 'https://dev.azure.com/koprowskipawel/_git/GithHubSyncRepo'
-            sourceGitRepositoryPersonalAccessToken: 'gaemwm5shwowtcdhln52bqp2swfwzw7vlwmfzbh4d3za67kkufrq'
-            sourceVerifySSLCertificate: false
-            sourceGitRepositoryCloneDirectoryName: 'aa'
+            sourceGitRepositoryPersonalAccessToken: '5kvrypj73x74qvnqcqigg4mwekfmv4bgh3eikt7vwnxlyyddxnmq'
+            # sourceVerifySSLCertificate: false
             destinationGitRepositoryUri: 'https://github.com/pawelpwc/mytestrepo.git'
-            destinationGitRepositoryPersonalAccessToken: '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'
+            destinationGitRepositoryPersonalAccessToken: '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'
     # sourceGitRepositoryUri: 'https://github.com/swellaby/vsts-mirror-git-repository.git'
     # sourceVerifySSLCertificate: false
     # destinationGitRepositoryUri: 'https://dev.azure.com/swellaby/OpenSource/_git/mirror2'
