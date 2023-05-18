@@ -20,7 +20,7 @@ stages:
             sourceVerifySSLCertificate: false
             sourceGitRepositoryCloneDirectoryName: 'aa'
             destinationGitRepositoryUri: 'https://github.com/pawelpwc/mytestrepo.git'
-            destinationGitRepositoryPersonalAccessToken: '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'
+            destinationGitRepositoryPersonalAccessToken: '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'
     # sourceGitRepositoryUri: 'https://github.com/swellaby/vsts-mirror-git-repository.git'
     # sourceVerifySSLCertificate: false
     # destinationGitRepositoryUri: 'https://dev.azure.com/swellaby/OpenSource/_git/mirror2'
